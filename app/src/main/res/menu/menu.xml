@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_catalogo"
+        android:icon="@drawable/ic_book"
+        android:title="@string/pestana_citas_medicas"
+        />
+
+    <item
+        android:id="@+id/navigation_donaciones"
+        android:icon="@drawable/ic_add"
+        android:title="@string/pestana_nueva_cita" />
+
+</menu>

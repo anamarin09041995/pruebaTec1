@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <layout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context="com.example.anamarin.pruebatec1.RegisterActivity"
+        >
+
+        <data>
+            <variable
+                name="handler"
+                type="com.example.anamarin.pruebatec1.RegisterActivity"/>
+        </data>
+
+        <TableLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:stretchColumns="*"
+            >
+
+            <TextView
+                android:id="@+id/nombre_app"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/title_app_size"
+                style="@style/Base.TextAppearance.AppCompat.Title"
+                android:textColor="@color/colorPrimary"
+                android:text="@string/nombre_app"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_top_nombreApp"
+                />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/small">
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/small"
+                    >
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/cedula"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:hint="@string/cedula"
+                        />
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/medium"
+                    android:layout_marginLeft="@dimen/small"
+                    >
+
+                    <android.support.design.widget.TextInputEditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:hint="@string/password"
+                        />
+
+                </android.support.design.widget.TextInputLayout>
+
+            </LinearLayout>
+
+            <TableRow>
+                <Button
+                    android:id="@+id/cancelar"
+                    style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                    android:text="@string/Cancelar"
+                    android:onClick="@{() -> handler.goToLogin()}"
+                    />
+
+                <Button
+                    android:id="@+id/registro"
+                    style="@style/Widget.AppCompat.Button.Colored"
+                    android:text="@string/ingresar"
+                    android:onClick="@{() -> handler.goToMain()}"
+                    />
+            </TableRow>
+
+        </TableLayout>
+    </layout>
+

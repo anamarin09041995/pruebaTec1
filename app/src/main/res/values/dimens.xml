@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="distancia_arriba">100dp</dimen>
+    <dimen name="title_app_size">30sp</dimen>
+    <dimen name="margin_top_nombreApp">80dp</dimen>
+    <dimen name="big">70sp</dimen>
+    <dimen name="medium">20dp</dimen>
+    <dimen name="small">10dp</dimen>
+    <dimen name="height_card">180dp</dimen>
+    <dimen name="img_size">120dp</dimen>
+    <dimen name="icon_size">20dp</dimen>
+    <dimen name="icon">40dp</dimen>
+    <dimen name="img_parallax">220dp</dimen>
+    <dimen name="no_margin">0dp</dimen>
+</resources>

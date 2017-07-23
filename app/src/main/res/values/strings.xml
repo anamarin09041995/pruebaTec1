@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">PruebaTec1</string>
+    <string name="size_title">35sp</string>
+    <string name="title">Hospital Ultima Esperanza</string>
+    <string name="nombre_app">Hospital Ultima Esperanza</string>
+    <string name="cedula">Cedula</string>
+    <string name="password">Contraseña</string>
+    <string name="registrate">Registrate</string>
+    <string name="ingresar">Ingresar</string>
+    <string name="Cancelar">Cancelar</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pestana_citas_medicas">Citas medicas</string>
+    <string name="pestana_nueva_cita">Nueva cita</string>
+    <string name="nueva_cita">Nueva Cita</string>
+    <string name="nombre_del_paciente">Nombre del paciente</string>
+    <string name="nombre_del_medico">Nombre del médico</string>
+    <string name="foto_del_paciente">Foto del paciente</string>
+    <string name="agregar_cita">Agregar Cita</string>
+</resources>
