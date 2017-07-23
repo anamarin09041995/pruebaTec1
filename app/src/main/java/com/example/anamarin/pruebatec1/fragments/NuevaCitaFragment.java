@@ -15,9 +15,7 @@ import com.example.anamarin.pruebatec1.R;
 public class NuevaCitaFragment extends Fragment {
 
 
-    public NuevaCitaFragment() {
-        // Required empty public constructor
-    }
+    public NuevaCitaFragment() {  }
 
 
     @Override
@@ -25,6 +23,11 @@ public class NuevaCitaFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_nueva_cita, container, false);
+    }
+
+    public static NuevaCitaFragment instance(){
+        NuevaCitaFragment fragment = new NuevaCitaFragment();
+        return fragment;
     }
 
 }

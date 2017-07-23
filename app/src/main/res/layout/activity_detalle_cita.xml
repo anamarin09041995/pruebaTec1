@@ -9,9 +9,6 @@
         <variable
             name="cita"
             type="com.example.anamarin.pruebatec1.models.CitasMedicas"/>
-        <variable
-            name="handler"
-            type="com.example.anamarin.pruebatec1.DetalleCitaActivity"/>
     </data>
 
     <android.support.design.widget.CoordinatorLayout
@@ -24,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <include layout="@layout/content_activity_detalle_cita" app:cita="@{cita}" app:handler="@{handler}"/>
+            <include layout="@layout/content_activity_detalle_cita" app:cita="@{cita}" />
 
         </android.support.v4.widget.NestedScrollView>
 

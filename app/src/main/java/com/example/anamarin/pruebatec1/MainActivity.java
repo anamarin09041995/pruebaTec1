@@ -7,8 +7,10 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.anamarin.pruebatec1.adapters.Pager;
 import com.example.anamarin.pruebatec1.databinding.ActivityMainBinding;
 import com.example.anamarin.pruebatec1.fragments.CitasMedicasFragment;
+import com.example.anamarin.pruebatec1.fragments.NuevaCitaFragment;
 import com.example.anamarin.pruebatec1.models.CitasMedicas;
 import com.squareup.picasso.Picasso;
 
@@ -27,6 +29,10 @@ public class MainActivity extends AppCompatActivity {
 
         List<Fragment> pages = new ArrayList<>();
         pages.add(CitasMedicasFragment.instance());
+        pages.add(NuevaCitaFragment.instance());
+
+        Pager adapter = new Pager(getSupportFragmentManager(), pages);
+        binding.pager.setAdapter(adapter);
 
     }
 
