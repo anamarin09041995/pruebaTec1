@@ -22,6 +22,9 @@ public class DetalleCitaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detalle_cita);
         binding = DataBindingUtil.setContentView(this,R.layout.activity_detalle_cita);
 
+        setSupportActionBar(binding.toolbar);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         pos = getIntent().getExtras().getInt("pos");
         cita = Data.getData().get(pos);
         binding.setCita(cita);

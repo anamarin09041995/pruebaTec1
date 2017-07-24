@@ -28,4 +28,13 @@ public class Pager extends FragmentStatePagerAdapter {
     public int getCount() {
         return data.size();
     }
+
+    @Override
+    public CharSequence getPageTitle(int position){
+        if(position == 0){
+            return "Citas medicas";
+        }else{
+            return "Nueva Cita";
+        }
+    }
 }

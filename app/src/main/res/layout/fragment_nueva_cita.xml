@@ -16,6 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:context="com.example.anamarin.pruebatec1.fragments.NuevaCitaFragment"
+       android:layout_marginTop="40dp"
         >
 
         <LinearLayout
@@ -35,7 +36,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/nombre_del_paciente"
+                android:hint="Nombre del paciente"
                 android:layout_marginLeft="@dimen/small"
                 />
 
@@ -58,7 +59,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/nombre_del_medico"
+                android:hint="Noombre del medico"
                 android:layout_marginLeft="@dimen/small"
                 />
 
@@ -81,7 +82,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hora de la cita"
+                android:hint="Fecha de la cita"
                 android:layout_marginLeft="@dimen/small"
                 />
 
@@ -104,7 +105,7 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/foto_del_paciente"
+                android:hint="Foto del paciente"
                 android:layout_marginLeft="@dimen/small"
                 />
 
@@ -127,19 +128,19 @@
             <EditText
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Historia del paciente"
+                android:hint="Historia del paciente"
                 android:layout_marginLeft="@dimen/small"
                 />
 
         </LinearLayout>
 
         <Button
+            android:layout_marginTop="112dp"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/btn_agregar"
             style="@style/Widget.AppCompat.Button.Colored"
             android:text="@string/agregar_cita"
-            android:onClick="@{() -> handler.agregarCita()}"
             />
 
     </LinearLayout>
