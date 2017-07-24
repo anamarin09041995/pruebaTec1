@@ -26,7 +26,7 @@ public class DetalleCitaActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         pos = getIntent().getExtras().getInt("pos");
-        cita = Data.getData().get(pos);
+        cita = Data.citas.get(pos);
         binding.setCita(cita);
 
         Picasso.with(this).load(Uri.parse(cita.getFoto())).into(binding.img);

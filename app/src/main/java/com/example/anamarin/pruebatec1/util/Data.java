@@ -12,9 +12,9 @@ import java.util.List;
 
 public class Data {
 
-    public static List<CitasMedicas> data;
+    public static List<CitasMedicas> citas;
 
-    public static List<CitasMedicas> getData(){
+    /*public static List<CitasMedicas> getData(){
         data = new ArrayList<>();
 
         CitasMedicas c1 = new CitasMedicas();
@@ -34,5 +34,5 @@ public class Data {
         data.add(c2);
 
         return data;
-    }
+    }*/
 }

@@ -9,6 +9,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import com.example.anamarin.pruebatec1.App;
 import com.example.anamarin.pruebatec1.DetalleCitaActivity;
@@ -17,17 +18,13 @@ import com.example.anamarin.pruebatec1.adapters.CitasMedicasAdapter;
 import com.example.anamarin.pruebatec1.databinding.FragmentCitasMedicasBinding;
 import com.example.anamarin.pruebatec1.models.CitasMedicas;
 import com.example.anamarin.pruebatec1.net.CitasMedicasClient;
-
+import com.example.anamarin.pruebatec1.util.Data;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
-import static com.example.anamarin.pruebatec1.util.Data.data;
-import static com.example.anamarin.pruebatec1.util.Data.getData;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -37,6 +34,7 @@ public class CitasMedicasFragment extends Fragment implements CitasMedicasAdapte
     FragmentCitasMedicasBinding binding;
     CitasMedicasAdapter adapter;
     CitasMedicasClient client;
+
 
     public static CitasMedicasFragment instance(){
         return new CitasMedicasFragment();
@@ -50,11 +48,11 @@ public class CitasMedicasFragment extends Fragment implements CitasMedicasAdapte
                              Bundle savedInstanceState) {
 
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_citas_medicas, container, false);
-        adapter = new CitasMedicasAdapter(getLayoutInflater(null), getData() , this);
+        adapter = new CitasMedicasAdapter(getLayoutInflater(null), new ArrayList<CitasMedicas>() , this);
         binding.recycler.setAdapter(adapter);
         binding.recycler.setLayoutManager(new LinearLayoutManager(getContext()));
 
-//        client = App.retrofit.create(CitasMedicasClient.class);
+        client = App.retrofit.create(CitasMedicasClient.class);
 
         return binding.getRoot();
 
@@ -63,21 +61,24 @@ public class CitasMedicasFragment extends Fragment implements CitasMedicasAdapte
     @Override
     public void onResume(){
         super.onResume();
-        //loadCitas();
+        loadCitas();
 
     }
 
     private void loadCitas(){
-        Call<List<CitasMedicas>> request = client.all();
+        int id = 1;
+        Call<List<CitasMedicas>> request = client.all(id);
         request.enqueue(new Callback<List<CitasMedicas>>() {
             @Override
             public void onResponse(Call<List<CitasMedicas>> call, Response<List<CitasMedicas>> response) {
-
+                if(response.isSuccessful()){
+                    Data.citas = response.body();
+                    adapter.setData(Data.citas);
+                }
             }
-
             @Override
             public void onFailure(Call<List<CitasMedicas>> call, Throwable t) {
-
+                Toast.makeText(getActivity(), "Error", Toast.LENGTH_SHORT).show();
             }
         });
     }

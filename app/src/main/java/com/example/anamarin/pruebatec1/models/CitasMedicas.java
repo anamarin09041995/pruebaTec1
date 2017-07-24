@@ -9,7 +9,12 @@ import java.util.Date;
 public class CitasMedicas {
 
     String nombreP, historia, nombreD, foto, password, horaCita;
-    Long cedula;
+    long cedula;
+
+    public CitasMedicas(String password, long cedula) {
+        this.password = password;
+        this.cedula = cedula;
+    }
 
     public String getNombreP() {
         return nombreP;
@@ -59,11 +64,11 @@ public class CitasMedicas {
         this.horaCita = horaCita;
     }
 
-    public Long getCedula() {
+    public long getCedula() {
         return cedula;
     }
 
-    public void setCedula(Long cedula) {
+    public void setCedula(long cedula) {
         this.cedula = cedula;
     }
 }
